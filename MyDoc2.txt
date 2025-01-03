@@ -1,0 +1,95 @@
+<td><a
+                    href="/update/${emp.getId()}">Edit</a></td>
+            
+                    href="/deleteEmployee/{id}/${emp.getId()}">Delete</a></td>
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Employee</title>
+</head>
+<body>
+<h1>Edit</h1>
+<form th:action="@{/update}" th:object="${employee}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <div>
+        <label>employeeName:</label>
+        <input type="text" th:field="*{name}" />
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+    </div>
+
+
+    <!-- Add other form fields here -->
+    <button type="submit">Update</button>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ employeeName:
+    <input type='text'
+           id='employeeName'
+           name='employeeName'>
+    </input>
+    <br> gender:
+    <input type='text'
+           id='gender'
+           name='gender'>
+    </input>
+    <br> mobile :
+    <input type='text'
+           id='mobile'
+           name='mobile'>
+    </input>
+
+    <br> email :
+    <input type='text'
+           id='email'
+           name='email'>
+    </input>
+
+    <br> hobby :
+    <input type='text'
+           id='hobby'
+           name='hobby'>
+    </input>
+
+    <br> address :
+    <input type='text'
+           id='address'
+           name='address'>
+    </input>
+
+    <br>
+    <button type='submit'
+            id='submitButton'>
+        Submit
+    </button>
+
+
+
+
+
